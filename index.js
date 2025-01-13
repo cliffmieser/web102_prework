@@ -193,4 +193,33 @@ firstGameContainer.append(topGame);
 let secondTopGame = secondGame["name"];
 secondGameContainer.append(secondTopGame); 
 
-console.log(`first game: ${firstGame.name} pledges: ${firstGame.pledged}, second game: ${secondGame.name}, pledges: ${secondGame.pledged}`);
+// Customizations (BONUS)
+
+// Give 3rd h2 element an ID for anchor tag
+let ourGames = document.getElementsByTagName("h2")[2];
+ourGames.setAttribute("id", "our-games");
+
+// Create paragraph element that links to the 'our games' section of page
+let ourGamesHeader = document.createElement('p');
+ourGamesHeader.innerHTML = `<a href="#our-games">See our games!</a>`;
+ourGamesHeader.classList.add("ourGamesShortcut");
+ourGamesHeader.style.marginLeft = "400px";
+ourGamesHeader.style.fontSize = "20px";
+ourGamesHeader.style.backgroundColor = "#a8b0bc";
+ourGamesHeader.style.borderRadius = "7px";
+ourGamesHeader.style.padding = "3px";
+ourGamesHeader.style.textDecorationColor = "None";
+ourGamesHeader.addEventListener("mouseenter", ()=>{
+    ourGamesHeader.style.color = "darkblue";
+});
+
+ourGamesHeader.addEventListener("mouseout", ()=>{
+    ourGamesHeader.style.color = "black";
+});
+
+let header = document.getElementsByClassName("header")[0];
+// Append elemnent to header
+header.append(ourGamesHeader);
+
+
+
